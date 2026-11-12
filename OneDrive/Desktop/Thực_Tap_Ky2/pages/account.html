@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account - TShop</title>
+
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <script src="../js/auth-layout.js" defer></script>
+    <script src="../js/pages/account.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <div id="site-header"></div>
+
+    <main class="auth-main">
+
+        <div class="account-breadcrumb">
+            Home / <span>My Account</span>
+        </div>
+
+        <div class="account-heading">
+            <span>Manage My Account</span>
+            <span>Welcome! <strong id="welcomeName">Customer</strong></span>
+        </div>
+
+        <div class="account-layout">
+
+            <!-- MENU TÀI KHOẢN -->
+            <aside class="account-sidebar">
+
+                <div class="sidebar-group">
+                    <h3>Manage My Account</h3>
+
+                    <a href="account.html" class="active">
+                        My Profile
+                    </a>
+
+                    <a href="account.html">
+                        Address Book
+                    </a>
+
+                    <a href="account.html">
+                        My Payment Options
+                    </a>
+                </div>
+
+                <div class="sidebar-group">
+                    <h3>My Orders</h3>
+
+                    <a href="account.html">My Returns</a>
+                    <a href="account.html">My Cancellations</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <h3>My Wishlist</h3>
+                    <a href="../index.html">View Wishlist</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <a href="login.html" id="logoutBtn">
+                        Log Out
+                    </a>
+                </div>
+
+            </aside>
+
+            <!-- THÔNG TIN CÁ NHÂN -->
+            <section class="account-card">
+
+                <h2>Edit Your Profile</h2>
+
+                <form id="accountForm">
+
+                    <div class="account-fields">
+
+                        <div class="account-field">
+                            <label for="firstName">First Name</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="First Name"
+                            >
+                        </div>
+
+                        <div class="account-field">
+                            <label for="lastName">Last Name</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Last Name"
+                            >
+                        </div>
+
+                        <div class="account-field">
+                            <label for="accountEmail">Email Address</label>
+                            <input
+                                type="email"
+                                id="accountEmail"
+                                placeholder="Email Address"
+                            >
+                        </div>
+
+                        <div class="account-field">
+                            <label for="accountPhone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="accountPhone"
+                                placeholder="Phone Number"
+                            >
+                        </div>
+
+                        <div class="account-field">
+                            <label for="accountAddress">Address</label>
+                            <input
+                                type="text"
+                                id="accountAddress"
+                                placeholder="Your Address"
+                            >
+                        </div>
+
+                    </div>
+
+                    <h3>Password Changes</h3>
+
+                    <div class="account-password">
+
+                        <input
+                            type="password"
+                            id="currentPassword"
+                            placeholder="Current Password"
+                        >
+
+                        <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="New Password"
+                        >
+
+                        <input
+                            type="password"
+                            id="confirmNewPassword"
+                            placeholder="Confirm New Password"
+                        >
+
+                    </div>
+
+                    <div class="account-actions">
+
+                        <button
+                            type="reset"
+                            class="account-cancel"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="auth-btn"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+</body>
+</html>

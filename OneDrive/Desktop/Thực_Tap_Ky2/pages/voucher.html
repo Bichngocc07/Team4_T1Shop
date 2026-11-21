@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher - TShop</title>
+    <link rel="stylesheet" href="../css/voucher.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">TShop</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="items.html">Shop</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <h1>Checkout</h1>
+        <p class="subtitle">Kiểm tra đơn hàng và áp dụng mã giảm giá</p>
+
+        <div class="checkout-grid">
+
+            <!-- Billing Details -->
+            <section class="billing-card">
+                <h2>Billing Details</h2>
+
+                <form id="billing-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" placeholder="Nhập họ và tên" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="Nhập email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" placeholder="Nhập địa chỉ" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" placeholder="Nhập thành phố" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="note">Order Note</label>
+                        <textarea id="note" placeholder="Ghi chú cho đơn hàng (nếu có)"></textarea>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Order Summary -->
+            <section class="summary-card">
+                <h2>Order Summary</h2>
+
+                <div class="product">
+                    <div>
+                        <strong>Basic T-shirt</strong>
+                        <p>250.000đ × 2</p>
+                    </div>
+                    <span>500.000đ</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">500000</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Shipping</span>
+                    <span id="shipping">30000</span>
+                </div>
+
+                <!-- Voucher -->
+                <div class="voucher-section">
+                    <h3>Voucher Code</h3>
+
+                    <div class="voucher-input">
+                        <input
+                            type="text"
+                            id="voucher-input"
+                            placeholder="Nhập mã giảm giá"
+                            autocomplete="off"
+                        >
+                        <button type="button" id="apply-voucher">Apply</button>
+                    </div>
+
+                    <p id="voucher-message" class="voucher-message" aria-live="polite"></p>
+
+                    <div id="applied-voucher" class="applied-voucher hidden">
+                        <div>
+                            <span class="voucher-tag" id="voucher-name"></span>
+                            <small>Voucher đã áp dụng</small>
+                        </div>
+                        <button type="button" id="remove-voucher" class="remove-voucher">
+                            Xóa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="price-row discount-row">
+                    <span>Discount</span>
+                    <span id="discount">-0đ</span>
+                </div>
+
+                <div class="total-row">
+                    <span>Total</span>
+                    <span id="total">530.000đ</span>
+                </div>
+
+                <button type="button" class="checkout-btn" id="place-order">
+                    Place Order
+                </button>
+
+                <p class="demo-note">
+                    Voucher đang sử dụng dữ liệu demo. API thật sẽ được tích hợp sau.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../js/voucher.js"></script>
+</body>
+</html>

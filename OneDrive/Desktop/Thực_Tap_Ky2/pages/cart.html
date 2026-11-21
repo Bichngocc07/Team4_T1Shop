@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TShop</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">TShop</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="items.html">Shop</a>
+            <a href="account.html">My Account</a>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <div class="page-heading">
+            <h1>Shopping Cart</h1>
+            <p>Kiểm tra sản phẩm trước khi thanh toán</p>
+        </div>
+
+        <div class="cart-layout">
+            <!-- Danh sách sản phẩm -->
+            <section class="cart-section">
+                <div id="cart-list"></div>
+
+                <!-- Giỏ hàng trống -->
+                <div id="empty-cart" class="empty-cart hidden">
+                    <div class="empty-icon">🛒</div>
+                    <h2>Giỏ hàng của bạn đang trống</h2>
+                    <p>Hãy khám phá các sản phẩm và thêm vào giỏ hàng.</p>
+                    <a href="items.html" class="shop-btn">Tiếp tục mua sắm</a>
+                </div>
+            </section>
+
+            <!-- Tổng tiền -->
+            <aside id="cart-summary" class="cart-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Số lượng sản phẩm</span>
+                    <span id="total-quantity">0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <span id="subtotal">0 ₫</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Tổng tiền</span>
+                    <span id="total-price">0 ₫</span>
+                </div>
+
+                <button id="checkout-btn" class="checkout-btn">
+                    Tiến hành thanh toán
+                </button>
+
+                <a href="items.html" class="continue-link">
+                    ← Tiếp tục mua sắm
+                </a>
+            </aside>
+        </div>
+    </main>
+
+    <script src="../js/cart.js"></script>
+</body>
+</html>

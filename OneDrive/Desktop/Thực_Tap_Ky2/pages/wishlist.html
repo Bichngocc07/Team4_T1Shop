@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - TShop</title>
+    <link rel="stylesheet" href="../css/wishlist.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">TShop</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="items.html">Shop</a>
+            <a href="account.html">My Account</a>
+        </nav>
+    </header>
+
+    <main class="wishlist-container">
+        <div class="wishlist-heading">
+            <div>
+                <h1>My Wishlist</h1>
+                <p>Những sản phẩm bạn yêu thích</p>
+            </div>
+
+            <span id="wishlist-count">0 sản phẩm</span>
+        </div>
+
+        <section id="wishlist-list" class="wishlist-grid"></section>
+
+        <section id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">♡</div>
+            <h2>Wishlist của bạn đang trống</h2>
+            <p>Hãy khám phá và thêm những sản phẩm bạn yêu thích nhé.</p>
+            <a href="items.html" class="shop-btn">Tiếp tục mua sắm</a>
+        </section>
+    </main>
+
+    <script src="../js/wishlist.js"></script>
+</body>
+</html>

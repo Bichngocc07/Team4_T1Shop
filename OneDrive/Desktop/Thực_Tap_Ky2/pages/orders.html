@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - TShop</title>
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">TShop</a>
+        <nav>
+            <a href="index.html">Shop</a>
+            <a href="account.html">My Account</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-heading">
+            <div>
+                <h1>My Orders</h1>
+                <p>Manage and track your orders</p>
+            </div>
+            <a href="items.html" class="continue-shopping">Continue Shopping</a>
+        </div>
+
+        <div class="order-tabs">
+            <button class="tab active" data-status="all">All Orders</button>
+            <button class="tab" data-status="Pending">Pending</button>
+            <button class="tab" data-status="Processing">Processing</button>
+            <button class="tab" data-status="Shipped">Shipped</button>
+            <button class="tab" data-status="Delivered">Delivered</button>
+            <button class="tab" data-status="Cancelled">Cancelled</button>
+        </div>
+
+        <section id="orders-list" class="orders-list"></section>
+
+        <section id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">📦</div>
+            <h2>No orders found</h2>
+            <p>You haven't placed any orders yet.</p>
+            <a href="items.html" class="continue-shopping">Start Shopping</a>
+        </section>
+    </main>
+
+    <!-- Order Detail Modal -->
+    <div id="order-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="order-detail"></div>
+        </div>
+    </div>
+
+    <script src="../js/orders.js"></script>
+</body>
+</html>

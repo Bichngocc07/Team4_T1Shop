@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book - TShop</title>
+    <link rel="stylesheet" href="../css/address-book.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">TShop</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="items.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="page-heading">
+        <div>
+            <h1>Sổ địa chỉ</h1>
+            <p>Quản lý địa chỉ giao hàng của bạn</p>
+        </div>
+
+        <button id="add-address-btn" class="primary-btn">
+            + Thêm địa chỉ
+        </button>
+    </div>
+
+    <div id="address-list" class="address-list"></div>
+
+    <div id="empty-address" class="empty-address">
+        <h3>Bạn chưa có địa chỉ giao hàng</h3>
+        <p>Thêm địa chỉ để thuận tiện cho việc đặt hàng.</p>
+    </div>
+</main>
+
+<!-- Form thêm / sửa địa chỉ -->
+<div id="address-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-heading">
+            <h2 id="modal-title">Thêm địa chỉ mới</h2>
+            <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+
+        <form id="address-form">
+            <input type="hidden" id="address-id">
+
+            <div class="form-group">
+                <label for="recipient">Tên người nhận *</label>
+                <input type="text" id="recipient"
+                    placeholder="Nhập tên người nhận">
+                <small class="error" id="recipient-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại *</label>
+                <input type="tel" id="phone"
+                    placeholder="Nhập số điện thoại">
+                <small class="error" id="phone-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ chi tiết *</label>
+                <textarea id="address"
+                    placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+                <small class="error" id="address-error"></small>
+            </div>
+
+            <label class="default-option">
+                <input type="checkbox" id="is-default">
+                Đặt làm địa chỉ mặc định
+            </label>
+
+            <div class="form-actions">
+                <button type="button" id="cancel-btn" class="secondary-btn">
+                    Hủy
+                </button>
+                <button type="submit" class="primary-btn">
+                    Lưu địa chỉ
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../js/address-book.js"></script>
+</body>
+</html>

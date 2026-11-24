@@ -1,50 +1,172 @@
 
-<!-- Payment Method -->
-<section class="payment-section">
-    <h2>Payment Method</h2>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TShop - Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
 
-    <div class="payment-options">
+<header class="header">
+    <a href="index.html" class="logo">TShop</a>
 
-        <!-- COD -->
-        <label class="payment-option selected" data-method="cod">
-            <input
-                type="radio"
-                name="payment"
-                value="cod"
-                checked
-            >
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="items.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
 
-            <span class="payment-icon">💵</span>
+<main class="container">
+    <p class="subtitle">Hoàn tất thông tin để đặt hàng</p>
 
-            <span class="payment-info">
-                <strong>Cash on Delivery (COD)</strong>
-                <small>Thanh toán khi nhận hàng</small>
-            </span>
+    <div class="checkout-grid">
 
-            <span class="payment-check">✓</span>
-        </label>
+        <!-- BILLING DETAILS -->
+        <section class="card">
+            <h2>Billing Details</h2>
 
-        <!-- Online Payment -->
-        <label class="payment-option" data-method="online">
-            <input
-                type="radio"
-                name="payment"
-                value="online"
-            >
+            <form id="billing-form" novalidate>
 
-            <span class="payment-icon">💳</span>
+                <div class="form-group">
+                    <label for="fullname">Full Name <span>*</span></label>
+                    <input type="text" id="fullname"
+                           placeholder="Nhập họ và tên">
+                    <small class="error" id="fullname-error"></small>
+                </div>
 
-            <span class="payment-info">
-                <strong>Online Payment</strong>
-                <small>Thanh toán trực tuyến</small>
-            </span>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span>*</span></label>
+                    <input type="tel" id="phone"
+                           placeholder="Nhập số điện thoại">
+                    <small class="error" id="phone-error"></small>
+                </div>
 
-            <span class="payment-check">✓</span>
-        </label>
+                <div class="form-group">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email"
+                           placeholder="Nhập email">
+                    <small class="error" id="email-error"></small>
+                </div>
 
+                <div class="form-group">
+                    <label for="address">Address <span>*</span></label>
+                    <input type="text" id="address"
+                           placeholder="Nhập địa chỉ">
+                    <small class="error" id="address-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City <span>*</span></label>
+                    <input type="text" id="city"
+                           placeholder="Nhập thành phố">
+                    <small class="error" id="city-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal"
+                           placeholder="Nhập mã bưu điện">
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Order Note</label>
+                    <textarea id="note"
+                              placeholder="Ghi chú đơn hàng"></textarea>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- ORDER SUMMARY -->
+        <section class="card">
+            <h2>Order Summary</h2>
+
+            <div id="product-list"></div>
+
+            <div class="price-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">0đ</strong>
+            </div>
+
+            <div class="price-row">
+                <span>Shipping</span>
+                <strong id="shipping">30.000đ</strong>
+            </div>
+
+            <hr>
+
+            <!-- VOUCHER -->
+            <div class="voucher-section">
+                <h3>Voucher Code</h3>
+
+                <div class="voucher-input">
+                    <input type="text" id="voucher-code"
+                           placeholder="Nhập mã giảm giá">
+                    <button type="button" id="apply-voucher">Apply</button>
+                </div>
+
+                <p id="voucher-message" class="message"></p>
+
+                <div id="voucher-applied" class="voucher-applied hidden">
+                    <strong id="voucher-name"></strong>
+                    <button type="button" id="remove-voucher">Remove</button>
+                </div>
+            </div>
+
+            <div class="price-row">
+                <span>Discount</span>
+                <strong id="discount" class="discount">-0đ</strong>
+            </div>
+
+            <hr>
+
+            <!-- PAYMENT METHOD -->
+            <div class="payment-section">
+                <h3>Payment Method</h3>
+
+                <label class="payment-option selected">
+                    <input type="radio" name="payment"
+                           value="cod" checked>
+                    <span>💵</span>
+                    <div>
+                        <strong>Cash on Delivery (COD)</strong>
+                        <small>Thanh toán khi nhận hàng</small>
+                    </div>
+                </label>
+
+                <label class="payment-option disabled">
+                    <input type="radio" name="payment"
+                           value="online" disabled>
+                    <span>💳</span>
+                    <div>
+                        <strong>Online Payment</strong>
+                        <small>Chưa khả dụng - Chờ tích hợp cổng thanh toán</small>
+                    </div>
+                </label>
+
+                <p id="payment-message" class="message">
+                    Bạn sẽ thanh toán khi nhận hàng.
+                </p>
+            </div>
+
+            <!-- TOTAL -->
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="total">0đ</strong>
+            </div>
+
+            <button type="button" id="place-order" class="place-order">
+                Place Order
+            </button>
+
+        </section>
     </div>
+</main>
 
-    <p id="payment-message" class="payment-message">
-        Bạn sẽ thanh toán khi nhận được hàng.
-    </p>
-</section>
+<script src="../js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!-- Payment Method -->
+<section class="payment-section">
+    <h2>Payment Method</h2>
+
+    <div class="payment-options">
+
+        <!-- COD -->
+        <label class="payment-option selected" data-method="cod">
+            <input
+                type="radio"
+                name="payment"
+                value="cod"
+                checked
+            >
+
+            <span class="payment-icon">💵</span>
+
+            <span class="payment-info">
+                <strong>Cash on Delivery (COD)</strong>
+                <small>Thanh toán khi nhận hàng</small>
+            </span>
+
+            <span class="payment-check">✓</span>
+        </label>
+
+        <!-- Online Payment -->
+        <label class="payment-option" data-method="online">
+            <input
+                type="radio"
+                name="payment"
+                value="online"
+            >
+
+            <span class="payment-icon">💳</span>
+
+            <span class="payment-info">
+                <strong>Online Payment</strong>
+                <small>Thanh toán trực tuyến</small>
+            </span>
+
+            <span class="payment-check">✓</span>
+        </label>
+
+    </div>
+
+    <p id="payment-message" class="payment-message">
+        Bạn sẽ thanh toán khi nhận được hàng.
+    </p>
+</section>

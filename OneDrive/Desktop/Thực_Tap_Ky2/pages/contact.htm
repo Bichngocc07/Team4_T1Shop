@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TShop</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">TShop</div>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="items.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="page-heading">
+        <h1>Contact Us</h1>
+        <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn.</p>
+    </section>
+
+    <div class="contact-layout">
+
+        <!-- Thông tin liên hệ -->
+        <section class="contact-info">
+            <h2>Thông tin liên hệ</h2>
+            <p class="description">
+                Hãy liên hệ với TShop nếu bạn cần hỗ trợ về sản phẩm,
+                đơn hàng hoặc dịch vụ.
+            </p>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h3>Địa chỉ</h3>
+                    <p>Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h3>Điện thoại</h3>
+                    <p>0123 456 789</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>support@tshop.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">🕒</div>
+                <div>
+                    <h3>Thời gian hỗ trợ</h3>
+                    <p>Thứ 2 - Thứ 7: 8:00 - 17:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form liên hệ -->
+        <section class="contact-form-section">
+            <h2>Gửi thông điệp cho chúng tôi</h2>
+
+            <form id="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name"
+                        placeholder="Nhập họ và tên">
+                    <small id="name-error" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email"
+                        placeholder="example@gmail.com">
+                    <small id="email-error" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone"
+                        placeholder="Nhập số điện thoại">
+                    <small id="phone-error" class="error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message"
+                        placeholder="Nhập nội dung thông điệp..."></textarea>
+                    <small id="message-error" class="error"></small>
+                </div>
+
+                <div id="form-status" class="form-status"
+                    role="status" aria-live="polite"></div>
+
+                <button type="submit" id="submit-btn">
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+    </div>
+</main>
+
+<script src="../js/contact.js"></script>
+</body>
+</html>
